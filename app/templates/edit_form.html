@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1>Edit Record</h1>
+<form action="/edit/{{student['id']}}" method="post">
+    <div class="form-row">
+        <label for="name">Name</label> 
+        <input class="field" type="text" id="name" name="name" placeholder="Name" value="{{student['student_name']}}">     
+        
+        <label for="student_id" >Student ID</label>
+        <input class="field" type="text" id="student_id" name="student_id" placeholder="Student ID" value="{{student['student_id']}}">
+        
+        <label for="student_points">Points</label>
+        <input class="field" type="number" id="student_points" name="points" placeholder="Points" value="{{student['student_points']}}">
+    </div>
+
+    <div class="form-btns">
+        <button class="edit-btn">Save</button>
+        <a class="cancel-link" href="{{ url_for('index') }}">Cancel</a>
+    </div>
+</form>
+{% endblock %}

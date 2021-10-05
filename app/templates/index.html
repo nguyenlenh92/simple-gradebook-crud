@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Individual Assignment</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     
+    </head>
+
+    
+    <body>
+        <div class="header">
+            <a class="header-link" href="{{ url_for('index') }}">Gradebook</a>
+        </div>
+
+        <div class="container">
+        {% block content %}
+
+                <div class="content-header">
+                    <h1>Gradebook</h1>
+                    <a class="add_entry_btn" href="{{ url_for('add_entry') }}">Add record</a>
+                </div>
+
+                <div class="thin-border"></div>
+                <table class="table-style">
+                    <thead>
+                        <tr>
+                            <th class="table-header">Name</th>
+                            <th class="table-header">ID</th>
+                            <th class="table-header">Points</th>
+                            <th class="table-header">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% if table|length < 1 %}
+                        <tr>
+                            <td class="empty-table-notification" colspan="4">No Records In The Gradebook</p>
+                        </tr>
+                    {% else %}
+                        {% for student in table %}
+                                <tr>
+                                    <td class="table-row">{{ student['student_name'] }}</td>
+                                    <td class="table-row">{{ student['student_id'] }}</td>
+                                    <td class="table-row">{{ student['student_points'] }}</td>
+                                    <td class="table-row">
+                                        <a class="edit-btn" href="/edit/{{student['id']}}">Edit</a>
+                                        <a class="remove-btn" href="/remove/{{student['id']}}">Remove</a>
+                                    </td>
+                                </tr>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+                </table>
+                
+
+        {% endblock %}
+        </div>
+        
+     </body>
+</html>

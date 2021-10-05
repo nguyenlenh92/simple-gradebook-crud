@@ -1,0 +1,171 @@
+
+body{
+    margin: 0;
+    background-color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #fff;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+
+.header{
+    position: relative;
+    display: flex;
+    background-color: #343a40;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    padding: 0.8rem 1rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 400;
+
+}
+
+a.header-link{
+    background-color: transparent;
+    text-decoration: none;
+    color:rgba(255, 255, 255, .5);
+}
+
+a.header-link:hover{
+    color: rgba(255, 255, 255, .75);
+}
+
+
+
+
+.content-header{
+    position: relative;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+a.add_entry_btn{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #1e7e34;
+    text-decoration: none;
+    padding: .25rem .5rem;
+    border-radius: 0.2rem;
+}
+
+a.add_entry_btn:hover{
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.edit-btn{
+    color: #fff;
+    background-color:#007bff;
+    border-color: #007bff;
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+    text-decoration: none;
+    margin: 0.25rem;
+}
+
+.edit-btn:hover{
+    color: #fff;
+    background-color: #0069d9;
+    border-color:#0069d9;
+}
+
+a.remove-btn{
+    color: #fff;
+    background-color:#dc3545;
+    border-color: #bd2130;
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+    text-decoration: none;
+}
+
+a.remove-btn:hover{
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.table-header {
+    border-top: 1px solid #dee2e6;
+    color: #212529;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.table-row{
+    background-color: rgba(0, 0, 0, .05);
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table-style{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.form-row{
+    padding: 1rem;
+}
+
+button{
+    border: none;
+}
+
+a.cancel-link{
+    text-decoration: none;
+    color: #0056b3;
+    margin: 0.25rem;
+}
+
+a.cancel-link:hover{
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.field{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+td.empty-table-notification{
+    text-align: center;
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    background-color: rgba(0, 0, 0, .05);
+}

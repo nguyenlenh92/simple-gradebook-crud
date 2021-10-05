@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1>Add Record</h1>
+<form action="{{ url_for('add_entry')}}" method="post">
+    <div class="form-row">
+        <label for="name">Name</label> 
+        <input class="field" type="text" name="name" placeholder="name">
+        
+        <label for="student_id" >Student ID</label>
+        <input class="field" type="text" name="id" placeholder="id">
+        
+        <label for="student_points">Points</label>
+        <input class="field" type="number" name="points" placeholder="points">
+    </div>
+
+    <div class="form-btns">
+        <button class="edit-btn">Save</button>
+        <a class="cancel-link" href="{{ url_for('index') }}">Cancel</a>
+    </div>
+</form>
+{% endblock %}

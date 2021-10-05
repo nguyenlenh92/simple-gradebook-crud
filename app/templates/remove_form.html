@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<form action="{{ url_for('remove_entry')}}" method="post">
+    <h5>Enter the user Details</h5>
+    <div>
+        <input type="number" name="id" placeholder="Primary key">
+    </div>
+
+    <div>
+        <button>Submit</button>
+    </div>
+</form>
+{% endblock %}
